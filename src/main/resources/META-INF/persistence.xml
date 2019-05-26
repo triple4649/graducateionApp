@@ -8,10 +8,10 @@
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/triple" />
-			<property name="javax.persistence.jdbc.user" value="triple" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/python" />
+			<property name="javax.persistence.jdbc.user" value="python" />
 			<property name="javax.persistence.jdbc.password" value="triple4649" />
-			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+			<property name="avax.persistence.schema-generation.database.action" value="create" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
 		</properties>
 	</persistence-unit>

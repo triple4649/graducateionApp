@@ -65,21 +65,24 @@ public class Search {
 		setValue(Optional.ofNullable(s->list.add(s)),Optional.ofNullable(null));
 		return String.format(querry, String.join("AND ", list));
 	}
+	//クエリの組み立てと、バインド値の設定を行う
+	//引数 Optional<Consumer<String>> e クエリの条件を設定する処理
+	//引数 Optional<Consumer<Object[]>>q バインド変数を設定する処理
 	private void setValue(
 			Optional<Consumer<String>> e,
 			Optional<Consumer<Object[]>>q) {
 		if(id!=null & !id.equals("")) {
-			e.ifPresent(s->s.accept("e.id=:id"));
+			e.ifPresent(s->s.accept(" e.id=:id "));
 			q.ifPresent(s->s.accept(new Object[]{"id",id}));
 		}
 		
 		if(nameKanji!=null & !nameKanji.equals("")) {
-			e.ifPresent(s->s.accept("e.nameKanji like :nameKanji"));
+			e.ifPresent(s->s.accept(" e.nameKanji like :nameKanji "));
 			q.ifPresent(s->s.accept(new Object[]{"nameKanji", "%"+ nameKanji+"%"}));
 		}
 		
 		if(nameKana!=null & !nameKana.equals("")) {
-			e.ifPresent(s->s.accept("e.kana like :nameKana"));
+			e.ifPresent(s->s.accept(" e.kana like :nameKana "));
 			q.ifPresent(s->s.accept(new Object[]{"nameKana", "%"+nameKana+"%"}));
 		}
 	}
