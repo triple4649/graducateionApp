@@ -17,6 +17,7 @@ public class Regist implements Persist{
 	private String phoneNum;
 	EntityManager em;
 	
+
 	public String regist() {
 		//画面チェックエラーがある場合は、自画面遷移する
 		if(!isValidate()) {
@@ -24,7 +25,7 @@ public class Regist implements Persist{
 		}
 		//加入者マスターに登録する
 		try {
-			regist();
+			doRegist();
 		}catch(Exception e) {
 			e.printStackTrace();
 			//DB登録時にエラーが発生した場合は自画面遷移する
@@ -48,7 +49,13 @@ public class Regist implements Persist{
 	//DBのトランザクション境界
 	public void persist(){
 		MasterEntity entity = new MasterEntity();
+		em.clear();
 		//エンティティに画面の入力値をバインドする
+		entity.setBirthday(birthday);
+		entity.setKana(kana);
+		entity.setNameKanji(nameKanji);
+		entity.setSex(sex);
+		entity.setPhoneNum(phoneNum);
 		em.persist(entity);
 	}
 	
@@ -100,5 +107,12 @@ public class Regist implements Persist{
 		this.phoneNum = phoneNum;
 	}
 	
+	public EntityManager getEm() {
+		return em;
+	}
+
+	public void setEm(EntityManager em) {
+		this.em = em;
+	}
 	
 }

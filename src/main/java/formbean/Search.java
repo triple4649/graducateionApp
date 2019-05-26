@@ -53,13 +53,14 @@ public class Search {
 				Optional.ofNullable(s->q.setParameter(((String)s[0]),s[1])));
 		
 		items=q.getResultList();
+		System.out.println(items);
 	}
 	
 	//DBへのQueyy文字列の組み立て
 	private String createQuerry() {
-		String querry="Select e from Master e"
+		String querry="Select e from MasterEntity e "
 				+ "where "
-				+ " %s ;";
+				+ " %s ";
 		List<String>list = new ArrayList<String>();
 		setValue(Optional.ofNullable(s->list.add(s)),Optional.ofNullable(null));
 		return String.format(querry, String.join("AND ", list));
@@ -68,18 +69,18 @@ public class Search {
 			Optional<Consumer<String>> e,
 			Optional<Consumer<Object[]>>q) {
 		if(id!=null & !id.equals("")) {
-			e.ifPresent(s->s.accept("id=:id"));
+			e.ifPresent(s->s.accept("e.id=:id"));
 			q.ifPresent(s->s.accept(new Object[]{"id",id}));
 		}
 		
 		if(nameKanji!=null & !nameKanji.equals("")) {
-			e.ifPresent(s->s.accept("nameKanji like ='%:nameKanji%'"));
-			q.ifPresent(s->s.accept(new Object[]{"nameKanji", nameKanji}));
+			e.ifPresent(s->s.accept("e.nameKanji like :nameKanji"));
+			q.ifPresent(s->s.accept(new Object[]{"nameKanji", "%"+ nameKanji+"%"}));
 		}
 		
 		if(nameKana!=null & !nameKana.equals("")) {
-			e.ifPresent(s->s.accept("nameKana like ='%:nameKana%'"));
-			q.ifPresent(s->s.accept(new Object[]{"nameKana", nameKana}));
+			e.ifPresent(s->s.accept("e.kana like :nameKana"));
+			q.ifPresent(s->s.accept(new Object[]{"nameKana", "%"+nameKana+"%"}));
 		}
 	}
 	

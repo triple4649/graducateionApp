@@ -9,7 +9,7 @@ public class Menu {
 		return "regist.xhtml";
 	}
 	public String moveSearch() {
-		return "result.xhtml";
+		return "search.xhtml";
 	}
 
 }
