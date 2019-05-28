@@ -17,20 +17,22 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
         	<div>
         		<div>検索項目</div>
         	</div>
-        	<div>
+	        <div style="display: flex">
         		<div>番号</div>
         		<div><h:inputText value="#{search.id}"/></div>
         	</div>
-        	<div>
+	        <div style="display: flex">
         		<div>氏名（漢字）</div>
         		<div><h:inputText value="#{search.nameKanji}"/></div>
+        	</div>
+	        <div style="display: flex">
         		<div>氏名（カナ）</div>
         		<div><h:inputText value="#{search.nameKana}"/></div>
         	</div>
         	
         	<div><h:commandButton value="検索" action="#{search.search()}" /></div>
         	
-        	<div>
+	        <div style="display: flex;justify-content: space-between;">
         		<div>氏名（漢字）</div>
         		<div>氏名（カナ）</div>
         		<div>生年月日</div>
@@ -38,15 +40,14 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
         		<div>電話番号</div>
         	</div>
 			<ui:repeat var="element" value="#{search.items}">
-	        	<div>
+	        	<div style="display: flex;justify-content: space-between;">
 	        		<div>#{element.nameKanji}</div>
 	        		<div>#{element.kana}</div>
 	        		<div>#{element.birthday}</div>
 	        		<div>#{element.sex}</div>
 	        		<div>#{element.phoneNum}</div>
-	        	</div>
+		        </div>
 			</ui:repeat>        	
-        	
         </h:form>	
     </h:body>	
 </html>
