@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>	
 <!DOCTYPE html>	
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">	
+<html 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">	
     <h:head>	
         <title>加入者情報検索画面</title>	
         <meta charset="utf-8"/>	
@@ -24,7 +27,12 @@
         	</div>
 	        <div style="display: flex">
         		<div>性別</div>
-        		<div><h:inputText value="#{regist.sex}"/></div>
+        		<div>
+					<h:selectOneMenu value="#{regist.sex}">
+						<f:selectItem itemLabel="男性" itemValue="M"/>
+						<f:selectItem itemLabel="女性" itemValue="F"/>
+					</h:selectOneMenu>
+        		</div>
         	</div>
 	        <div style="display: flex">
         		<div>電話番号</div>

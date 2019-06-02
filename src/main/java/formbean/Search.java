@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
@@ -12,7 +13,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import entity.MasterEntity;
+import code.SEX;
+import entity.KokyakuMaster;
 @ManagedBean		
 @RequestScoped		
 public class Search {
@@ -20,7 +22,7 @@ public class Search {
 	private String id; 
 	private String nameKanji; 
 	private String nameKana; 
-	private List<MasterEntity>items;
+	private List<KokyakuMaster>items;
 	EntityManager em ;
 	
 	@PostConstruct
@@ -46,19 +48,31 @@ public class Search {
 	//マスターの一覧を取得する
 	private void getMasterList() {
 		//Querryの取得
-		TypedQuery<MasterEntity>q = em.createQuery(createQuerry(), 
-				MasterEntity.class);
+		TypedQuery<KokyakuMaster>q = em.createQuery(createQuerry(), 
+				KokyakuMaster.class);
 		//bind変数の値をセットする
 		setValue(Optional.ofNullable(null),
 				Optional.ofNullable(s->q.setParameter(((String)s[0]),s[1])));
 		
-		items=q.getResultList();
-		System.out.println(items);
+		items=q.getResultList()
+		.stream()
+		.map(Search::convertSex)
+		.collect(Collectors.toList());
+	}
+	
+	//DBに格納された性別のコード値をコード名称に設定する
+	private static KokyakuMaster convertSex(KokyakuMaster m) {
+		if(m.getSex().equals(SEX.MALE.getSexCode())) {
+			m.setSex(SEX.MALE.getSexName());
+		}else {
+			m.setSex(SEX.FEMALE.getSexName());
+		}
+		return m;
 	}
 	
 	//DBへのQueyy文字列の組み立て
 	private String createQuerry() {
-		String querry="Select e from MasterEntity e "
+		String querry="Select e from KokyakuMaster e "
 				+ "where "
 				+ " %s ";
 		List<String>list = new ArrayList<String>();
@@ -105,10 +119,10 @@ public class Search {
 	public void setNameKana(String nameKana) {
 		this.nameKana = nameKana;
 	}
-	public List<MasterEntity> getItems() {
+	public List<KokyakuMaster> getItems() {
 		return items;
 	}
-	public void setItems(List<MasterEntity> items) {
+	public void setItems(List<KokyakuMaster> items) {
 		this.items = items;
 	}
 

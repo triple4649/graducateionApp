@@ -1,21 +1,31 @@
 package entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class MasterEntity {
+public class KokyakuMaster {
 	@Id
 	@GeneratedValue
+	@Column(name="BANGO",length=7)
 	private long id;
+	@Column(name="SHIMEI_KANJI",length=20)
 	private String nameKanji;
+	@Column(name="SHIMEI_KANA",length=20)
 	private String kana;
+	@Column(name="BIRTH_YMD",length=8)
 	private String birthday;
+	@Column(name="SEX",length=1)
 	private String sex;
+	@Column(name="TEL_NO",length=12)
 	private String phoneNum;
 	public long getId() {
 		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}
 	public String getNameKanji() {
 		return nameKanji;
@@ -47,9 +57,6 @@ public class MasterEntity {
 	public void setPhoneNum(String phoneNum) {
 		this.phoneNum = phoneNum;
 	}
-	public void setId(long id) {
-		this.id = id;
-	}
-
+	
 
 }

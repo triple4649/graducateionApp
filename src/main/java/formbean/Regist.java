@@ -3,7 +3,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.persistence.EntityManager;
 
-import entity.MasterEntity;
+import entity.KokyakuMaster;
 import logic.Persist;
 import proxy.TransactionIntercepter;
 @ManagedBean		
@@ -48,7 +48,7 @@ public class Regist implements Persist{
 	
 	//DBのトランザクション境界
 	public void persist(){
-		MasterEntity entity = new MasterEntity();
+		KokyakuMaster entity = new KokyakuMaster();
 		em.clear();
 		//エンティティに画面の入力値をバインドする
 		entity.setBirthday(birthday);

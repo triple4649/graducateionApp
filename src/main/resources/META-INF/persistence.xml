@@ -4,14 +4,14 @@
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="myUnitInPersistenceXML"
 		transaction-type="RESOURCE_LOCAL">
-		<class>entity.MasterEntity</class>
+		<class>entity.KokyakuMaster</class>
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5431/python" />
 			<property name="javax.persistence.jdbc.user" value="python" />
 			<property name="javax.persistence.jdbc.password" value="triple4649" />
-			<property name="avax.persistence.schema-generation.database.action" value="create" />
+			<property name="javax.persistence.schema-generation.database.action" value="create" />
 			<property name="eclipselink.ddl-generation.output-mode" value="database" />
 		</properties>
 	</persistence-unit>

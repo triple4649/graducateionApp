@@ -39,7 +39,7 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 	        </div>
         	<div style="width:700px" id='result'>
 		        <div style="display: flex;align-items: center;">
-	        		<div  style='border:solid 1px;width:150px'>氏名（漢字）</div>
+	        		<div style='border:solid 1px;width:150px'>氏名（漢字）</div>
 	        		<div style='border:solid 1px;width:150px'>氏名（カナ）</div>
 	        		<div style='border:solid 1px;width:100px'>生年月日</div>
 	        		<div style='border:solid 1px;width:50px'>性別</div>
@@ -47,7 +47,7 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 	        	</div>
 				<ui:repeat var="element" value="#{search.items}">
 		        	<div style="display: flex;align-items: center;">
-		        		<div  style='border:solid 1px;width:150px'>#{element.nameKanji}</div>
+		        		<div style='border:solid 1px;width:150px'>#{element.nameKanji}</div>
 		        		<div style='border:solid 1px;width:150px'>#{element.kana}</div>
 		        		<div style='border:solid 1px;width:100px'>#{element.birthday}</div>
 		        		<div style='border:solid 1px;width:50px'>#{element.sex}</div>
