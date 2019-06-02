@@ -10,44 +10,51 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
     </h:head>	
     <h:body>	
         <h:form>
-        	<div>加入者情報検索画面</div>
-        	<div class="messagearea">#{regist.error}</div>
-        	<div >#{regist.error}</div>
-        	
-        	<div>
-        		<div>検索項目</div>
-        	</div>
-	        <div style="display: flex">
-        		<div>番号</div>
-        		<div><h:inputText value="#{search.id}"/></div>
-        	</div>
-	        <div style="display: flex">
-        		<div>氏名（漢字）</div>
-        		<div><h:inputText value="#{search.nameKanji}"/></div>
-        	</div>
-	        <div style="display: flex">
-        		<div>氏名（カナ）</div>
-        		<div><h:inputText value="#{search.nameKana}"/></div>
-        	</div>
-        	
-        	<div><h:commandButton value="検索" action="#{search.search()}" /></div>
-        	
-	        <div style="display: flex;justify-content: space-between;">
-        		<div>氏名（漢字）</div>
-        		<div>氏名（カナ）</div>
-        		<div>生年月日</div>
-        		<div>性別</div>
-        		<div>電話番号</div>
-        	</div>
-			<ui:repeat var="element" value="#{search.items}">
-	        	<div style="display: flex;justify-content: space-between;">
-	        		<div>#{element.nameKanji}</div>
-	        		<div>#{element.kana}</div>
-	        		<div>#{element.birthday}</div>
-	        		<div>#{element.sex}</div>
-	        		<div>#{element.phoneNum}</div>
+        	<div id='header' style='height:100px;width:700px'>
+		        <div>加入者情報検索画面</div>
+		        <div class="messagearea">#{regist.error}</div>
+		        <div id='errormsg' style='border:solid 1px;height:50px'>
+			        <div >#{regist.error}</div>
 		        </div>
-			</ui:repeat>        	
+	        </div>	
+	        <div  style="width:700px;height:150px" id='search'  >
+		        <div>検索項目</div>
+	        	<div id='searchinput' style=''>
+			        <div style="display: flex;">
+		        		<div style='border:solid 1px;width:100px'>番号</div>
+		        		<div style='padding:3px'><h:inputText value="#{search.id}"/></div>
+		        	</div>
+			        <div style="display: flex">
+		        		<div style='border-left:solid 1px;border-right:solid 1px;width:100px'>
+		        			氏名（漢字）
+		        		</div>
+		        		<div style='padding:3px'><h:inputText value="#{search.nameKanji}"/></div>
+		        	</div>
+			        <div style="display: flex">
+		        		<div style='border:solid 1px;width:100px'>氏名（カナ）</div>
+		        		<div style='padding:3px'><h:inputText value="#{search.nameKana}"/></div>
+		        	</div>
+		        </div>
+	        	<div><h:commandButton value="検索" action="#{search.search()}" /></div>
+	        </div>
+        	<div style="width:700px" id='result'>
+		        <div style="display: flex;align-items: center;">
+	        		<div  style='border:solid 1px;width:150px'>氏名（漢字）</div>
+	        		<div style='border:solid 1px;width:150px'>氏名（カナ）</div>
+	        		<div style='border:solid 1px;width:100px'>生年月日</div>
+	        		<div style='border:solid 1px;width:50px'>性別</div>
+	        		<div style='border:solid 1px;width:120px'>電話番号</div>
+	        	</div>
+				<ui:repeat var="element" value="#{search.items}">
+		        	<div style="display: flex;align-items: center;">
+		        		<div  style='border:solid 1px;width:150px'>#{element.nameKanji}</div>
+		        		<div style='border:solid 1px;width:150px'>#{element.kana}</div>
+		        		<div style='border:solid 1px;width:100px'>#{element.birthday}</div>
+		        		<div style='border:solid 1px;width:50px'>#{element.sex}</div>
+		        		<div style='border:solid 1px;width:120px'>#{element.phoneNum}</div>
+			        </div>
+				</ui:repeat>
+			</div>
         </h:form>	
     </h:body>	
 </html>
