@@ -30,6 +30,9 @@ public class Search {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("myUnitInPersistenceXML");
 		em = factory.createEntityManager();
 	}
+	public String backMenu() {
+		return "Menu.xhtml";
+	}
 	public String search() {
 		//画面の入力チェックを行う
 		if(!isVaildate()) {

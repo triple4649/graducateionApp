@@ -1,138 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry output="bin/main" kind="src" path="src/main/java">
+	<classpathentry kind="src" output="bin/main" path="src/main/java">
 		<attributes>
 			<attribute name="gradle_scope" value="main"/>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry output="bin/test" kind="src" path="src/test/java">
+	<classpathentry kind="src" output="bin/test" path="src/test/java">
 		<attributes>
 			<attribute name="gradle_scope" value="test"/>
 			<attribute name="gradle_used_by_scope" value="test"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="output" path="bin/default"/>
-	<classpathentry output="bin/main" kind="src" path="src/main/resources">
+	<classpathentry kind="src" output="bin/main" path="src/main/resources">
 		<attributes>
 			<attribute name="gradle_scope" value="main"/>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.3.4/ccaf6ee9f02e57bd209ada7e02c0782977ea1267/jackson-databind-2.3.4-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.3.4/c9478f1871de4c9cf723e5d497a14c7ad274a50b/jackson-databind-2.3.4.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.3.4/c9478f1871de4c9cf723e5d497a14c7ad274a50b/jackson-databind-2.3.4.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.3.4/ccaf6ee9f02e57bd209ada7e02c0782977ea1267/jackson-databind-2.3.4-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/61f0983eb190954ccdede31e786a9e0bd9767c4a/javax.ws.rs-api-2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/61f0983eb190954ccdede31e786a9e0bd9767c4a/javax.ws.rs-api-2.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.2.4/37e255da4175df5656b08e132bb2af5c51d024a2/postgresql-42.2.4-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.2.4/dff98730c28a4b3a3263f0cf4abb9a3392f815a7/postgresql-42.2.4.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.2.4/dff98730c28a4b3a3263f0cf4abb9a3392f815a7/postgresql-42.2.4.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.postgresql/postgresql/42.2.4/37e255da4175df5656b08e132bb2af5c51d024a2/postgresql-42.2.4-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/eclipselink/2.5.1/9e77fd7d09168aa2f01e1e0c9d2fa2498f313973/eclipselink-2.5.1-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/eclipselink/2.5.1/13bdbd486b15c1c7fd2d8392fe5d62d5a5ac10d6/eclipselink-2.5.1.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/eclipselink/2.5.1/13bdbd486b15c1c7fd2d8392fe5d62d5a5ac10d6/eclipselink-2.5.1.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/eclipselink/2.5.1/9e77fd7d09168aa2f01e1e0c9d2fa2498f313973/eclipselink-2.5.1-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.1/d865eed930c98d444a6b090f412ea38637213cb2/jsoup-1.9.1-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.1/3dc0a3bea4f876c54846cd050e688f1bfc78fc96/jsoup-1.9.1.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.1/3dc0a3bea4f876c54846cd050e688f1bfc78fc96/jsoup-1.9.1.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.9.1/d865eed930c98d444a6b090f412ea38637213cb2/jsoup-1.9.1-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.sun.faces/jsf-api/2.2.18/b00b8ced8ca99849af59162cd327b830c65c2955/jsf-api-2.2.18-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.sun.faces/jsf-api/2.2.18/83c995b905738dcf8eded1041541e895403db695/jsf-api-2.2.18.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.sun.faces/jsf-api/2.2.18/83c995b905738dcf8eded1041541e895403db695/jsf-api-2.2.18.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.sun.faces/jsf-api/2.2.18/b00b8ced8ca99849af59162cd327b830c65c2955/jsf-api-2.2.18-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/4.0.1/49a9da44db6e6b5f44ce15ddfcfe2b6666151b25/javax.servlet-api-4.0.1-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/4.0.1/a27082684a2ff0bf397666c3943496c44541d1ca/javax.servlet-api-4.0.1.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/4.0.1/a27082684a2ff0bf397666c3943496c44541d1ca/javax.servlet-api-4.0.1.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/4.0.1/49a9da44db6e6b5f44ce15ddfcfe2b6666151b25/javax.servlet-api-4.0.1-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.3.0/cc964b08f8d37e3d8465de923b9e6321107a5429/jackson-annotations-2.3.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.3.0/f5e853a20b60758922453d56f9ae1e64af5cb3da/jackson-annotations-2.3.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.3.0/f5e853a20b60758922453d56f9ae1e64af5cb3da/jackson-annotations-2.3.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.3.0/cc964b08f8d37e3d8465de923b9e6321107a5429/jackson-annotations-2.3.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.3.4/2e8eba31f58aa7cb52579c9d7d101cf509e3b75f/jackson-core-2.3.4-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.3.4/801fecfb8baf0ba5296e2d2ea0664f72b0761b9a/jackson-core-2.3.4.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.3.4/801fecfb8baf0ba5296e2d2ea0664f72b0761b9a/jackson-core-2.3.4.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.3.4/2e8eba31f58aa7cb52579c9d7d101cf509e3b75f/jackson-core-2.3.4-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/javax.persistence/2.1.0/da95a959929234c57b988644696c065d79774fc4/javax.persistence-2.1.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/javax.persistence/2.1.0/5bab675816dbe0f64bb86004b108bf2a00292358/javax.persistence-2.1.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/javax.persistence/2.1.0/5bab675816dbe0f64bb86004b108bf2a00292358/javax.persistence-2.1.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/javax.persistence/2.1.0/da95a959929234c57b988644696c065d79774fc4/javax.persistence-2.1.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/commonj.sdo/2.1.1/6de70daec63068c07df2a87507cafb2cc34ef2b1/commonj.sdo-2.1.1-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/commonj.sdo/2.1.1/90d4c89ce0a69f58619f1a247bbf420122139ff5/commonj.sdo-2.1.1.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/commonj.sdo/2.1.1/90d4c89ce0a69f58619f1a247bbf420122139ff5/commonj.sdo-2.1.1.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.eclipse.persistence/commonj.sdo/2.1.1/6de70daec63068c07df2a87507cafb2cc34ef2b1/commonj.sdo-2.1.1-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="main,test"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/6ae21107276aececc279f142d8fee7734f51fc3e/junit-jupiter-params-5.2.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/d70083080bf3400c181562919cb03bf7588104e1/junit-jupiter-params-5.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/d70083080bf3400c181562919cb03bf7588104e1/junit-jupiter-params-5.2.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/6ae21107276aececc279f142d8fee7734f51fc3e/junit-jupiter-params-5.2.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/cde9c7381febf2edf35949808b084c982045bafa/junit-jupiter-api-5.2.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/9cd901df48d88d8e605a6ccb2c3f140c92db6bf2/junit-jupiter-api-5.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/9cd901df48d88d8e605a6ccb2c3f140c92db6bf2/junit-jupiter-api-5.2.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/cde9c7381febf2edf35949808b084c982045bafa/junit-jupiter-api-5.2.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/dbce1d822d3dc6c61703b340cd79018518685451/junit-platform-commons-1.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/dbce1d822d3dc6c61703b340cd79018518685451/junit-platform-commons-1.2.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/777508fa9f3e03cafb3c1fb2eba3dca317f4b1ee/apiguardian-api-1.0.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/777508fa9f3e03cafb3c1fb2eba3dca317f4b1ee/apiguardian-api-1.0.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/80aaf67bc5cc5e749baf41b9b523f8939aaaca28/opentest4j-1.1.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/c8e2a3e3bc7f3e4bb5075306452db5290f9b117a/opentest4j-1.1.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/c8e2a3e3bc7f3e4bb5075306452db5290f9b117a/opentest4j-1.1.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/80aaf67bc5cc5e749baf41b9b523f8939aaaca28/opentest4j-1.1.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/ad0d47eb12682e65b371f1f7eb6a284ff2716d40/junit-jupiter-engine-5.2.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/de87318ccd3dfa1a98ebfef792d362776f1914de/junit-jupiter-engine-5.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/de87318ccd3dfa1a98ebfef792d362776f1914de/junit-jupiter-engine-5.2.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/ad0d47eb12682e65b371f1f7eb6a284ff2716d40/junit-jupiter-engine-5.2.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.2.0/1bfa9b12b39daca1113cf24c7dfa3ced520e08cd/junit-platform-engine-1.2.0-sources.jar" kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.2.0/35fa3529ce843ada1a10b0909ccb4a8148ee638d/junit-platform-engine-1.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.2.0/35fa3529ce843ada1a10b0909ccb4a8148ee638d/junit-platform-engine-1.2.0.jar" sourcepath="C:/Users/OKUMA/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.2.0/1bfa9b12b39daca1113cf24c7dfa3ced520e08cd/junit-platform-engine-1.2.0-sources.jar">
 		<attributes>
 			<attribute name="gradle_used_by_scope" value="test"/>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/java/workspace/graducateionApp/lib/kuromoji-0.7.7.jar">
-		<attributes>
-			<attribute name="gradle_used_by_scope" value="main,test"/>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="output" path="bin/default"/>
 </classpath>

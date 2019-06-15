@@ -29,7 +29,10 @@ test {
 		html.enabled = true
 	}
 }
-
+task copyDependencies(type: Copy) {
+  from configurations.testRuntime
+  into "C:/java/workspace/graducateionApp/lib"
+}
 task wrapper(type: Wrapper) {
 	description = 'Generates gradlew[.bat] scripts'
 	gradleVersion = '4.6'

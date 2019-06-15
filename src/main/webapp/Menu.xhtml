@@ -5,13 +5,30 @@
         <title>メニュー画面</title>	
         <meta charset="utf-8"/>	
     </h:head>	
-    <h:body>	
-        <h:form>	
-        	<div></div>
-        	<div></div>
-        	<div><h:commandButton value="加入者登録画面" action="#{menu.moveRegist()}" /></div>
-        	<div></div>
-        	<div><h:commandButton value="加入者情報検索画面" action="#{menu.moveSearch()}" /></div>
-        </h:form>	
-    </h:body>	
+    <h:body>    
+        <h:form>
+        	<div style='border-style: solid solid hidden solid;border-width:1px;
+        		width:600px;height:100px;
+        		display: flex;flex-direction: column;
+	        	align-items: center;
+	        	justify-content: center;padding:5px'>
+	        	
+	        	<div>メニュー画面</div>
+        	</div>
+	        <div style='border:solid 1px;width:600px;height:400px;
+	        	display: flex;flex-direction: column;
+	        	align-items: center;
+	        	justify-content: center;padding:5px'>
+		        	<div  style='padding:5px'>
+		        		<h:commandButton value="加入者登録画面" action="#{menu.moveRegist()}" 
+		        		style='width:400px;height:100px;'/>
+		        	</div>
+		        	<div>　</div>
+		        	<div style='padding:5px'>
+		        		<h:commandButton value="加入者情報検索画面" action="#{menu.moveSearch()}" 
+		        		style='width:400px;height:100px;;'/>
+		        	</div>
+	        </div>
+        </h:form>
+    </h:body>
 </html>

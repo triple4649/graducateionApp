@@ -10,36 +10,58 @@
     </h:head>	
     <h:body>	
         <h:form>
-        	<div>加入者登録画面</div>
-        	<div class="messagearea">#{regist.error}</div>
-        	<div >#{regist.error}</div>
-	        <div style="display: flex">
-        		<div>氏名（漢字）</div>
-        		<div><h:inputText value="#{regist.nameKanji}"/></div>
+        	<div style='
+        		display: flex;flex-direction: column;
+	        	align-items: left;justify-content: center;'>
+	        	<div style='border-style:solid solid solid solid;border-width:1px;
+	        	width:600px;height:30px;text-align: center;'>
+	        		加入者登録画面
+	        	</div>
+	        	<div class="messagearea" style='border-style:hidden solid solid  solid;
+	        		border-width:1px;width:600px;height:50px'>
+	        		<div style='overflow-y	: scroll;'>
+		        		#{regist.error}
+	        		</div>
+	        	</div>
         	</div>
-	        <div style="display: flex">
-        		<div>氏名（カナ）</div>
-        		<div><h:inputText value="#{regist.kana}"/></div>
-        	</div>
-	        <div style="display: flex">
-        		<div>生年月日</div>
-        		<div><h:inputText value="#{regist.birthday}"/></div>
-        	</div>
-	        <div style="display: flex">
-        		<div>性別</div>
-        		<div>
-					<h:selectOneMenu value="#{regist.sex}">
-						<f:selectItem itemLabel="男性" itemValue="M"/>
-						<f:selectItem itemLabel="女性" itemValue="F"/>
-					</h:selectOneMenu>
-        		</div>
-        	</div>
-	        <div style="display: flex">
-        		<div>電話番号</div>
-        		<div><h:inputText value="#{regist.phoneNum}"/></div>
-        	</div>
-        	<div></div>
-        	<div><h:commandButton value="登録" action="#{regist.regist()}" /></div>
+        	<div style='display:flex;flex-direction: column;align-items: 
+        		left;justify-content: space-around;height:300px;
+        		border-style:hidden solid  solid solid;border-width:1px;width:600px' >
+	        	<div style='padding-left:25px'>
+	        		<h:commandButton value="戻る" action="#{regist.backMenu()}" />
+	        	</div>
+        		<div style='padding-left:25px'>
+			        <div style="display: flex">
+		        		<div style='width:140px;background-color:#EDF7FF;'>氏名（漢字）※</div>
+		        		<div><h:inputText value="#{regist.nameKanji}"/></div>
+		        	</div>
+			        <div style="display: flex">
+		        		<div style='width:140px;background-color:#EDF7FF;'>氏名（カナ）※</div>
+		        		<div><h:inputText value="#{regist.kana}"/></div>
+		        	</div>
+			        <div style="display: flex">
+		        		<div  style='width:140px;background-color:#EDF7FF;'>生年月日※</div>
+		        		<div><h:inputText value="#{regist.birthday}"/></div>
+		        	</div>
+			        <div style="display: flex">
+		        		<div  style='width:140px;background-color:#EDF7FF;'>性別</div>
+		        		<div>
+							<h:selectOneMenu value="#{regist.sex}">
+								<f:selectItem itemLabel="男性" itemValue="M"/>
+								<f:selectItem itemLabel="女性" itemValue="F"/>
+							</h:selectOneMenu>
+		        		</div>
+		        	</div>
+			        <div style="display: flex">
+		        		<div  style='width:140px;background-color:#EDF7FF;'>電話番号</div>
+		        		<div><h:inputText value="#{regist.phoneNum}"/></div>
+		        	</div>
+		        	<div>※入力必須項目</div>
+	        	</div>
+	        	<div style='padding-left:25px'>
+	        		<h:commandButton value="登録" action="#{regist.regist()}" />
+	        	</div>
+			</div>
         </h:form>	
     </h:body>	
 </html>

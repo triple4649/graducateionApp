@@ -17,41 +17,101 @@ xmlns:f="http://xmlns.jcp.org/jsf/core">
 			        <div >#{regist.error}</div>
 		        </div>
 	        </div>	
-	        <div  style="width:700px;height:150px" id='search'  >
-		        <div>検索項目</div>
+	        <div  style="width:700px;height:200px;" id='search'  >
+	        	<div style='height:30px;width:580px;text-align:left;padding:10px'>
+		        	<h:commandButton value="戻る" action="#{search.backMenu()}" />
+	        	</div>
+		        <div style='background-color:#EDF7FF;width:600px;border:solid 1px;'>検索項目</div>
 	        	<div id='searchinput' style=''>
-			        <div style="display: flex;">
-		        		<div style='border:solid 1px;width:100px'>番号</div>
-		        		<div style='padding:3px'><h:inputText value="#{search.id}"/></div>
+			        <div style="display: flex;align-items: center;">
+		        		<div style='border-right:1px solid;border-left:1px solid;border-bottom:1px solid;
+		        		width:120px;height:30px;background-color:#EDF7FF;display: flex;align-items: center;'>
+		        		番号
+		        		</div>
+		        		<div style='border-right:1px solid;height:30px;
+		        		border-bottom:1px solid;width:480px;display: flex;align-items: center;'>
+		        			<h:inputText value="#{search.id}"/>
+		        		</div>
 		        	</div>
-			        <div style="display: flex">
-		        		<div style='border-left:solid 1px;border-right:solid 1px;width:100px'>
+			        <div style="display: flex;align-items: center;">
+		        		<div style='border-left:solid 1px;border-right:solid 1px;border-bottom:solid 1px;
+		        		width:120px;background-color:#EDF7FF;height:30px;display: flex;align-items: center;'>
 		        			氏名（漢字）
 		        		</div>
-		        		<div style='padding:3px'><h:inputText value="#{search.nameKanji}"/></div>
-		        	</div>
-			        <div style="display: flex">
-		        		<div style='border:solid 1px;width:100px'>氏名（カナ）</div>
-		        		<div style='padding:3px'><h:inputText value="#{search.nameKana}"/></div>
+		        		<div style='width:180px;height:30px;display: flex;align-items: center;
+		        		border-right:solid 1px;border-bottom:solid 1px;'>
+		        		
+		        		<h:inputText value="#{search.nameKanji}"/></div>
+				        <div style="display: flex">
+			        		<div style='border-right:solid 1px;border-bottom:solid 1px;width:120px;height:30px;
+			        		background-color:#EDF7FF;display: flex;align-items: center;'>
+			        			氏名（カナ）
+			        		</div>
+			        		<div style='width:180px;border-right:solid 1px;height:30px;
+			        		border-bottom:solid 1px;display: flex;align-items: center;'>
+			        			<h:inputText value="#{search.nameKana}"/>
+			        		</div>
+			        	</div>
 		        	</div>
 		        </div>
-	        	<div><h:commandButton value="検索" action="#{search.search()}" /></div>
+	        	<div style='height:30px;width:580px;text-align:right;padding:10px'>
+		        	<h:commandButton value="検索" action="#{search.search()}" />
+	        	</div>
 	        </div>
         	<div style="width:700px" id='result'>
-		        <div style="display: flex;align-items: center;">
-	        		<div style='border:solid 1px;width:150px'>氏名（漢字）</div>
-	        		<div style='border:solid 1px;width:150px'>氏名（カナ）</div>
-	        		<div style='border:solid 1px;width:100px'>生年月日</div>
-	        		<div style='border:solid 1px;width:50px'>性別</div>
-	        		<div style='border:solid 1px;width:120px'>電話番号</div>
-	        	</div>
+        		<div style='display:flex;border:solid 1px'>
+		        	<div style='border-right:1px solid;width:80px;text-align: center;background-color:#EDF7FF;'>
+		        	№
+		        	</div>
+		        	<div>
+				        <div style="display: flex;align-items: center;">
+			        		<div style='border-right:1px solid;text-align: center;width:100px;background-color:#EDF7FF;'>
+			        			番号
+			        		</div>
+			        		<div style='border-right:1px solid;width:220px;text-align: center;background-color:#EDF7FF;'>
+			        			氏名（漢字）
+			        		</div>
+			        		<div style='text-align: center;background-color:#EDF7FF;width:320px;'>
+			        			氏名（カナ）
+			        		</div>
+			        	</div>
+			        	<div style="display: flex;align-items: center;">
+			        		<div style='border-right:1px solid;border-top:1px solid;
+			        		width:100px;text-align: center;background-color:#EDF7FF;'>性別</div>
+			        		<div style='border-right:1px solid;border-top:1px solid;width:220px;text-align: center;background-color:#EDF7FF;'>
+			        		生年月日
+			        		</div>
+			        		<div style='border-top:1px solid;text-align: center;width:320px;background-color:#EDF7FF'>電話番号</div>
+			        	</div>
+		        	</div>
+		        </div>
 				<ui:repeat var="element" value="#{search.items}">
-		        	<div style="display: flex;align-items: center;">
-		        		<div style='border:solid 1px;width:150px'>#{element.nameKanji}</div>
-		        		<div style='border:solid 1px;width:150px'>#{element.kana}</div>
-		        		<div style='border:solid 1px;width:100px'>#{element.birthday}</div>
-		        		<div style='border:solid 1px;width:50px'>#{element.sex}</div>
-		        		<div style='border:solid 1px;width:120px'>#{element.phoneNum}</div>
+        		<div style='display:flex;border-right:1px solid;border-bottom:1px solid;border-left:1px solid;'>
+			        	<div style='border-right:1px solid;width:80px;text-align:center'>
+			        	№
+			        	</div>
+			        	<div >
+					        <div style="display: flex;align-items: center;">
+				        		<div style='border-right:1px solid;text-align:center;width:100px'>番号</div>
+				        		<div style='border-right:1px solid;width:220px'>
+				        			#{element.nameKanji}
+				        		</div>
+				        		<div>
+				        			#{element.kana}
+				        		</div>
+				        	</div>
+				        	<div style="display: flex;align-items: center;">
+				        		<div style='border-right:1px solid;border-top:1px solid;
+				        		width:100px;text-align: center'>#{element.sex}</div>
+				        		<div style='border-right:1px solid;
+				        			border-top:1px solid;width:220px;'>
+				        		#{element.birthday}　
+				        		</div>
+				        		<div style='border-top:1px solid;width:320px'>
+				        			#{element.phoneNum}　
+				        		</div>
+				        	</div>
+			        	</div>
 			        </div>
 				</ui:repeat>
 			</div>

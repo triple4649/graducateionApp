@@ -17,6 +17,10 @@ public class Regist implements Persist{
 	private String phoneNum;
 	EntityManager em;
 	
+	public String backMenu() {
+		return "Menu.xhtml";
+	}
+	
 
 	public String regist() {
 		//画面チェックエラーがある場合は、自画面遷移する
