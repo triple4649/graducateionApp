@@ -12,7 +12,25 @@ public class Regist implements Persist{
 	private String nameKanji;
 	private String error;
 	private String kana;
-	private String birthday;
+	private String birthdayYear;
+
+
+	public void setBirthdayMonth(String birthdayMonth) {
+		this.birthdayMonth = birthdayMonth;
+	}
+
+
+	public String getBirthdayDay() {
+		return birthdayDay;
+	}
+
+
+	public void setBirthdayDay(String birthdayDay) {
+		this.birthdayDay = birthdayDay;
+	}
+
+	private String birthdayMonth;
+	private String birthdayDay;
 	private String sex;
 	private String phoneNum;
 	EntityManager em;
@@ -55,7 +73,7 @@ public class Regist implements Persist{
 		KokyakuMaster entity = new KokyakuMaster();
 		em.clear();
 		//エンティティに画面の入力値をバインドする
-		entity.setBirthday(birthday);
+		entity.setBirthday(birthdayYear+birthdayMonth+birthdayDay);
 		entity.setKana(kana);
 		entity.setNameKanji(nameKanji);
 		entity.setSex(sex);
@@ -87,13 +105,6 @@ public class Regist implements Persist{
 		this.kana = kana;
 	}
 
-	public String getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
-	}
 
 	public String getSex() {
 		return sex;
@@ -117,6 +128,19 @@ public class Regist implements Persist{
 
 	public void setEm(EntityManager em) {
 		this.em = em;
+	}
+	public String getBirthdayYear() {
+		return birthdayYear;
+	}
+
+
+	public void setBirthdayYear(String birthdayYear) {
+		this.birthdayYear = birthdayYear;
+	}
+
+
+	public String getBirthdayMonth() {
+		return birthdayMonth;
 	}
 	
 }

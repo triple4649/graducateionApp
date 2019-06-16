@@ -59,17 +59,21 @@ public class Search {
 		
 		items=q.getResultList()
 		.stream()
-		.map(Search::convertSex)
+		.map(Search::convertEntity)
 		.collect(Collectors.toList());
 	}
 	
-	//DBに格納された性別のコード値をコード名称に設定する
-	private static KokyakuMaster convertSex(KokyakuMaster m) {
+	//DBから取得した値を画面表示用に変換する
+	private static KokyakuMaster convertEntity(KokyakuMaster m) {
 		if(m.getSex().equals(SEX.MALE.getSexCode())) {
 			m.setSex(SEX.MALE.getSexName());
 		}else {
 			m.setSex(SEX.FEMALE.getSexName());
 		}
+		m.setBirthday(String.format("%s年%s月%s日", 
+				m.getBirthday().substring(0, 4),
+				m.getBirthday().substring(4, 6),
+				m.getBirthday().substring(6, 8)));
 		return m;
 	}
 	

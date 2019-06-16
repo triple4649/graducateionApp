@@ -30,33 +30,37 @@
 	        	<div style='padding-left:25px'>
 	        		<h:commandButton value="戻る" action="#{regist.backMenu()}" />
 	        	</div>
-        		<div style='padding-left:25px'>
-			        <div style="display: flex">
-		        		<div style='width:140px;background-color:#EDF7FF;'>氏名（漢字）※</div>
-		        		<div><h:inputText value="#{regist.nameKanji}"/></div>
+        		<div style='padding-left:25px display:flex;'>
+			        <div style="display: flex;column;align-items:center">
+		        		<div style='width:140px;height:40px;background-color:#EDF7FF;display: flex;column;align-items:center'>氏名（漢字）<span style='color:red'>※</span></div>
+		        		<div style="display: flex;column;align-items:center"><h:inputText value="#{regist.nameKanji}"/></div>
 		        	</div>
-			        <div style="display: flex">
-		        		<div style='width:140px;background-color:#EDF7FF;'>氏名（カナ）※</div>
-		        		<div><h:inputText value="#{regist.kana}"/></div>
+			        <div style="display: flex;column;align-items:center">
+		        		<div style='height:40px;width:140px;background-color:#EDF7FF;display: flex;column;align-items:center'>氏名（カナ）<span style='color:red'>※</span></div>
+		        		<div style="display: flex;column;align-items:center"><h:inputText value="#{regist.kana}"/></div>
 		        	</div>
-			        <div style="display: flex">
-		        		<div  style='width:140px;background-color:#EDF7FF;'>生年月日※</div>
-		        		<div><h:inputText value="#{regist.birthday}"/></div>
+			        <div style="display: flex;column;align-items:center">
+		        		<div  style='width:140px;height:40px;background-color:#EDF7FF;display: flex;column;align-items:center'>生年月日<span style='color:red'>※</span></div>
+		        		<div  style="display: flex;column;align-items:center">
+		        			<h:inputText value="#{regist.birthdayYear}" size='5'/><span>年</span>
+		        			<h:inputText value="#{regist.birthdayMonth}"  size='3'/><span>月</span>
+		        			<h:inputText value="#{regist.birthdayDay}"  size='3'/><span>日</span>
+		        		</div>
 		        	</div>
-			        <div style="display: flex">
-		        		<div  style='width:140px;background-color:#EDF7FF;'>性別</div>
-		        		<div>
+			        <div style="display: flex;column;align-items:center">
+		        		<div  style='width:140px;height:40px;background-color:#EDF7FF;display: flex;column;align-items:center'>性別</div>
+		        		<div style="display: flex;column;align-items:center">
 							<h:selectOneMenu value="#{regist.sex}">
 								<f:selectItem itemLabel="男性" itemValue="M"/>
 								<f:selectItem itemLabel="女性" itemValue="F"/>
 							</h:selectOneMenu>
 		        		</div>
 		        	</div>
-			        <div style="display: flex">
-		        		<div  style='width:140px;background-color:#EDF7FF;'>電話番号</div>
-		        		<div><h:inputText value="#{regist.phoneNum}"/></div>
+			        <div style="display: flex;column;align-items:center">
+		        		<div  style='width:140px;height:40px;background-color:#EDF7FF;display: flex;column;align-items:center'>電話番号</div>
+		        		<div style="display: flex;column;align-items:center"><h:inputText value="#{regist.phoneNum}"/></div>
 		        	</div>
-		        	<div>※入力必須項目</div>
+		        	<div><span style='color:red'>※</span>入力必須項目</div>
 	        	</div>
 	        	<div style='padding-left:25px'>
 	        		<h:commandButton value="登録" action="#{regist.regist()}" />
