@@ -1,53 +1,32 @@
 package formbean;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.persistence.EntityManager;
 
-import entity.KokyakuMaster;
-import logic.Persist;
-import proxy.TransactionIntercepter;
+import logic.RegistLogic;
 @ManagedBean		
 @RequestScoped		
-public class Regist implements Persist{
+public class Regist {
 	private String nameKanji;
 	private String error;
 	private String kana;
 	private String birthdayYear;
-
-
-	public void setBirthdayMonth(String birthdayMonth) {
-		this.birthdayMonth = birthdayMonth;
-	}
-
-
-	public String getBirthdayDay() {
-		return birthdayDay;
-	}
-
-
-	public void setBirthdayDay(String birthdayDay) {
-		this.birthdayDay = birthdayDay;
-	}
-
 	private String birthdayMonth;
 	private String birthdayDay;
 	private String sex;
 	private String phoneNum;
-	EntityManager em;
 	
 	public String backMenu() {
 		return "Menu.xhtml";
 	}
 	
-
 	public String regist() {
 		//画面チェックエラーがある場合は、自画面遷移する
 		if(!isValidate()) {
 			return "regist.xhtml";
 		}
-		//加入者マスターに登録する
+		//ロジッククラスを実行する
 		try {
-			doRegist();
+			new RegistLogic().doLogic(this);
 		}catch(Exception e) {
 			e.printStackTrace();
 			//DB登録時にエラーが発生した場合は自画面遷移する
@@ -61,24 +40,6 @@ public class Regist implements Persist{
 	//画面入力チェック
 	private boolean isValidate() {
 		return true;
-	}
-	//DB登録
-	public void doRegist() throws Exception {
-		Persist targetClass = TransactionIntercepter.getProxyInstance(this);
-		targetClass.persist();
-	}
-	
-	//DBのトランザクション境界
-	public void persist(){
-		KokyakuMaster entity = new KokyakuMaster();
-		em.clear();
-		//エンティティに画面の入力値をバインドする
-		entity.setBirthday(birthdayYear+birthdayMonth+birthdayDay);
-		entity.setKana(kana);
-		entity.setNameKanji(nameKanji);
-		entity.setSex(sex);
-		entity.setPhoneNum(phoneNum);
-		em.persist(entity);
 	}
 	
 	public String getNameKanji() {
@@ -122,13 +83,6 @@ public class Regist implements Persist{
 		this.phoneNum = phoneNum;
 	}
 	
-	public EntityManager getEm() {
-		return em;
-	}
-
-	public void setEm(EntityManager em) {
-		this.em = em;
-	}
 	public String getBirthdayYear() {
 		return birthdayYear;
 	}
@@ -142,5 +96,19 @@ public class Regist implements Persist{
 	public String getBirthdayMonth() {
 		return birthdayMonth;
 	}
+	public void setBirthdayMonth(String birthdayMonth) {
+		this.birthdayMonth = birthdayMonth;
+	}
+
+
+	public String getBirthdayDay() {
+		return birthdayDay;
+	}
+
+
+	public void setBirthdayDay(String birthdayDay) {
+		this.birthdayDay = birthdayDay;
+	}
+
 	
 }

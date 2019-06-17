@@ -6,6 +6,7 @@ import javax.faces.bean.RequestScoped;
 public class Menu {
 	
 	public String moveRegist() {
+		
 		return "regist.xhtml";
 	}
 	public String moveSearch() {
